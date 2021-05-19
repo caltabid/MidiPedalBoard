@@ -11,7 +11,7 @@ It is USB MIDI class-compliant, so you can add MIDI port without drivers(Windows
 The USB-MIDI Class Driver is based on [mimuz-tuch](https://github.com/mimuz/mimuz-tuch) project (c) [D.F.Mac. @TripArts Music](https://github.com/tadfmac).
 
 I got great inspiration from 2 open source projects:
-* [USB-MIDI Interface 8IN/8OUT for STM32 CureMIDI8] (https://github.com/keshikan/CureMIDI8)
+* [USB-MIDI Interface 8IN/8OUT for STM32 CureMIDI8](https://github.com/keshikan/CureMIDI8)
 * [Arduino MIDI Footswitch](https://github.com/Hecsall/arduino-midi-footswitch) 
 
 ## Specifications
