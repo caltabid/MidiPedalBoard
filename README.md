@@ -23,21 +23,21 @@ I got great inspiration from 2 open source projects:
 * USB MIDI class-compliant
 
 ### How to use it
-Page2/Looper Btn
-* When activated (Led on) use second page for other buttons
-* No CC is sent when pressed
-Mode potentiometer (#8, the last one)
-* Left => Normal mode: Btn sends 127 when activated (Led On) and 0 on deactivation
-* Right => Bypass mode: Btn sends 0 when activated (Led On) and 127 on deactivation
-* Half => Disable potentiometers CC
-* No CC is sent when rotated
-Button CC values (excluded Looper/Page2 Btn)
- {51, 52, 53, 54, 55, 56, 57, 58, 59}
- {61, 62, 63, 64, 65, 66, 67, 68, 69}
-Potentiometers CC values (excluded Mode Pot)
- {18, 19, 20, 21, 22, 23, 24};
-Expression pedal CC values
- {16, 17};
+* Page2/Looper Btn
+  * When activated (Led on) use second page for other buttons
+  * No CC is sent when pressed
+* Mode potentiometer (#8, the last one)
+  * Left => Normal mode: Btn sends 127 when activated (Led On) and 0 on deactivation
+  * Right => Bypass mode: Btn sends 0 when activated (Led On) and 127 on deactivation
+  * Half => Disable potentiometers CC
+  * No CC is sent when rotated
+* Button CC values (excluded Looper/Page2 Btn)
+  * {51, 52, 53, 54, 55, 56, 57, 58, 59}
+  * {61, 62, 63, 64, 65, 66, 67, 68, 69}
+* Potentiometers CC values (excluded Mode Pot)
+  * {18, 19, 20, 21, 22, 23, 24};
+* Expression pedal CC values
+  * {16, 17};
 
 ## Building Information
 
@@ -93,5 +93,7 @@ See also [LICENSE.md](./LICENSE.md)
 
 ## Update History
 
+* (2021/05/21)
+  * Added documentation in pdf format, improved readme and fixed code structure.
 * (2021/05/19)
   * Initial Release.
