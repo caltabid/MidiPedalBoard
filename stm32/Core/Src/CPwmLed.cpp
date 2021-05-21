@@ -2,7 +2,7 @@
  * PwmLed.cpp
  *
  *  Created on: May 14, 2021
- *      Author: caltabid
+ *      Author: Daniele Caltabiano
  */
 
 #include <CPwmLed.h>

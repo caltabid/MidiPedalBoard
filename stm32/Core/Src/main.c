@@ -24,7 +24,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "usbd_midi_if.h"
-#include "CAllDevices.h"
+#include "Process.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -77,7 +77,7 @@ uint16_t *getADCbuffer(void)
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  CAllDevices AllDevices;
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -86,6 +86,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
+  ProcessInit();
 
   /* USER CODE END Init */
 
@@ -132,7 +133,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  AllDevices.Update();
+    HAL_Delay(1);
+    ProcessExecute();
   }
   /* USER CODE END 3 */
 }

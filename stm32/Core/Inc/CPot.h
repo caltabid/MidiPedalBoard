@@ -2,7 +2,7 @@
  * CPot.h
  *
  *  Created on: May 15, 2021
- *      Author: caltabid
+ *      Author: Daniele Caltabiano
  */
 
 #ifndef SRC_CPOT_H_

@@ -2,7 +2,7 @@
  * AllDevices.h
  *
  *  Created on: May 14, 2021
- *      Author: caltabid
+ *      Author: Daniele Caltabiano
  */
 
 #ifndef SRC_CALLDEVICES_H_

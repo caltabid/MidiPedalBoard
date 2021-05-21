@@ -2,7 +2,7 @@
  * CDebounce.h
  *
  *  Created on: May 14, 2021
- *      Author: caltabid
+ *      Author: Daniele Caltabiano
  */
 
 #ifndef SRC_CDEBOUNCE_H_

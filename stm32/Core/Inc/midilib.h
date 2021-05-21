@@ -2,7 +2,7 @@
  * midilib.h
  *
  *  Created on: May 14, 2021
- *      Author: caltabid
+ *      Author: Daniele Caltabiano
  */
 
 #ifndef __MIDI_LIB_H

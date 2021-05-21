@@ -2,7 +2,7 @@
  * CExp.cpp
  *
  *  Created on: May 15, 2021
- *      Author: caltabid
+ *      Author: Daniele Caltabiano
  */
 
 #include "CExp.h"

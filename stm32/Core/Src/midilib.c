@@ -2,7 +2,7 @@
  * midilib.c
  *
  *  Created on: May 14, 2021
- *      Author: caltabid
+ *      Author: Daniele Caltabiano
  */
 
 #include "midilib.h"
@@ -19,7 +19,6 @@ void sendMidiNote(uint8_t noteOnOff, uint8_t channel, uint8_t pitch, uint8_t vel
 {
   midiEventPacket_t MidiMsg = {0x08 | noteOnOff, 0x80 | channel, pitch, velocity};
   sendMidiMessage(&MidiMsg.type, 4);
-  USBD_MIDI_SendPacket();
 }
 
 // Event type hard-coded (0x0B = control change, aka "MIDI CC").
@@ -31,5 +30,4 @@ void sendMidiCC(uint8_t channel, uint8_t control, uint8_t value)
 {
     midiEventPacket_t MidiMsg = {0x0B, 0xB0 | channel, control, value};
     sendMidiMessage(&MidiMsg.type, 4);
-    USBD_MIDI_SendPacket();
 }

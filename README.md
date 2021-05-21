@@ -16,16 +16,34 @@ I got great inspiration from 2 open source projects:
 
 ## Specifications
 
-* 10 buttons
-* 8 potentiometers
+### Features
+* 10 buttons (9 general purpose + Page2)
+* 8 potentiometers (7 general purpose + Mode)
 * 2 expression pedals
 * USB MIDI class-compliant
+
+### How to use it
+Page2/Looper Btn
+* When activated (Led on) use second page for other buttons
+* No CC is sent when pressed
+Mode potentiometer (#8, the last one)
+* Left => Normal mode: Btn sends 127 when activated (Led On) and 0 on deactivation
+* Right => Bypass mode: Btn sends 0 when activated (Led On) and 127 on deactivation
+* Half => Disable potentiometers CC
+* No CC is sent when rotated
+Button CC values (excluded Looper/Page2 Btn)
+ {51, 52, 53, 54, 55, 56, 57, 58, 59}
+ {61, 62, 63, 64, 65, 66, 67, 68, 69}
+Potentiometers CC values (excluded Mode Pot)
+ {18, 19, 20, 21, 22, 23, 24};
+Expression pedal CC values
+ {16, 17};
 
 ## Building Information
 
 ### Making hardware
 
-See [Presentation](./Documents/STM32pedalStomps.odp)
+See [Presentation](./Documents/STM32pedalStomps.pdf)
 
 Basically you should work some wood:
 
@@ -44,7 +62,7 @@ When building the binary file will be created in /stm32/Debug/ or /stm32/Release
 
 * [Binary file for STM32F407G-DISC1](./Documents/Disc407.bin)
 * [STM32CubeIDE Project file](./stm32/)
-* [Documentation](./Documents/STM32pedalStomps.odp)
+* [Documentation](./Documents/STM32pedalStomps.pdf)
 
 ## NOTICE
 

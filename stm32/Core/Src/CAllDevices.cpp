@@ -2,7 +2,7 @@
  * AllDevices.cpp
  *
  *  Created on: May 14, 2021
- *      Author: caltabid
+ *      Author: Daniele Caltabiano
  */
 
 #include "CAllDevices.h"
@@ -63,8 +63,6 @@ void CAllDevices::Update(void)
   int i, Mode, StompPolarity, EnablePot;
   CStompBtn *ActiveLayer;
 
-  HAL_Delay(1);
-  //this->tick++;
   //Wait USB configuration when USB connection error has occurred.
   if(USBD_STATE_CONFIGURED != hUsbDeviceFS.dev_state) {
     this->LedMain.Set(0, 400, 200);
@@ -101,6 +99,7 @@ void CAllDevices::Update(void)
   if (Exp[0].Update()) this->LedMain.Pulse();
   if (Exp[1].Update()) this->LedMain.Pulse();
   this->LedMain.Update();
+  USBD_MIDI_SendPacket();
 
   if( FUNC_SUCCESS == midiGetFromUsbRx(0, &uart_tx_dat) ) {
     this->LedMain.Pulse();

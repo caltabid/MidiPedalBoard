@@ -2,7 +2,7 @@
  * CExp.h
  *
  *  Created on: May 15, 2021
- *      Author: caltabid
+ *      Author: Daniele Caltabiano
  */
 
 #ifndef SRC_CEXP_H_

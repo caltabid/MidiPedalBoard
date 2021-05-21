@@ -2,7 +2,7 @@
  * CStompBtn.h
  *
  *  Created on: May 14, 2021
- *      Author: caltabid
+ *      Author: Daniele Caltabiano
  */
 
 #ifndef SRC_CSTOMPBTN_H_

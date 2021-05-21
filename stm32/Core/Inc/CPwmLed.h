@@ -2,7 +2,7 @@
  * PwmLed.h
  *
  *  Created on: May 14, 2021
- *      Author: caltabid
+ *      Author: Daniele Caltabiano
  */
 
 #ifndef SRC_PWMLED_H_
