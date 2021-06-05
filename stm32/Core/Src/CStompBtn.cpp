@@ -16,7 +16,7 @@ CStompBtn::~CStompBtn()
 {
 }
 
-void CStompBtn::Init(GPIO_TypeDef *BtnPort, uint16_t BtnPin, GPIO_TypeDef *LedPort, uint16_t LedPin, uint8_t CC, uint8_t OldValue, uint8_t State)
+void CStompBtn::Init(GPIO_TypeDef *BtnPort, uint16_t BtnPin, GPIO_TypeDef *LedPort, uint16_t LedPin, uint8_t CC, uint8_t OldValue, uint8_t State, int Mode)
 {
   this->BtnPort  = BtnPort ;
   this->BtnPin   = BtnPin  ;
@@ -25,7 +25,8 @@ void CStompBtn::Init(GPIO_TypeDef *BtnPort, uint16_t BtnPin, GPIO_TypeDef *LedPo
   this->CC       = CC      ;
   this->OldValue = OldValue;
   this->State    = State   ;
-  this->Debounce.Init(100, 0);
+  this->Mode     = Mode    ;
+  this->Debounce.Init(50, 0);
 }
 
 int CStompBtn::Update(int Polarity) // 0: active, 1: bypass
@@ -38,14 +39,22 @@ int CStompBtn::Update(int Polarity) // 0: active, 1: bypass
     if (CurrentValue) { // rising edge
       this->State = !this->State; // toggle state
       if (this->CC>0) {
-        Command = Polarity?!this->State:this->State;
+        if (this->Mode) {
+          Command = 1;
+        } else {
+          Command = Polarity?!this->State:this->State;
+        }
         sendMidiCC(0, this->CC, 127*Command);
       }
       ret=1;
     }
     this->OldValue = CurrentValue;
   }
-  HAL_GPIO_WritePin(this->LedPort, this->LedPin, (GPIO_PinState)this->State); // always refresh led status
+  if (this->Mode) {
+    HAL_GPIO_WritePin(this->LedPort, this->LedPin, (GPIO_PinState)NewValue);
+  } else {
+    HAL_GPIO_WritePin(this->LedPort, this->LedPin, (GPIO_PinState)this->State);
+  }
   return ret;
 }
 

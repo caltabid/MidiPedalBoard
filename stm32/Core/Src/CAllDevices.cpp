@@ -21,27 +21,27 @@ CAllDevices::CAllDevices()
   };
   uint8_t ExpCCvalues[2] = {16, 17};
   uint8_t PotCCvalues[8] = {18, 19, 20, 21, 22, 23, 24, 0};
-  this->StompLooper.Init(StompBtn05_GPIO_Port, StompBtn05_Pin, StompLED05_GPIO_Port, StompLED05_Pin, 0, 0, 0);
+  this->StompLooper.Init(StompBtn05_GPIO_Port, StompBtn05_Pin, StompLED05_GPIO_Port, StompLED05_Pin, 0, 0, 0, 0);
 
-  this->StompsL1[0].Init(StompBtn01_GPIO_Port, StompBtn01_Pin, StompLED01_GPIO_Port, StompLED01_Pin, StompCCvalues[0][0], 0, 0);
-  this->StompsL1[1].Init(StompBtn02_GPIO_Port, StompBtn02_Pin, StompLED02_GPIO_Port, StompLED02_Pin, StompCCvalues[0][1], 0, 0);
-  this->StompsL1[2].Init(StompBtn03_GPIO_Port, StompBtn03_Pin, StompLED03_GPIO_Port, StompLED03_Pin, StompCCvalues[0][2], 0, 0);
-  this->StompsL1[3].Init(StompBtn04_GPIO_Port, StompBtn04_Pin, StompLED04_GPIO_Port, StompLED04_Pin, StompCCvalues[0][3], 0, 0);
-  this->StompsL1[4].Init(StompBtn06_GPIO_Port, StompBtn06_Pin, StompLED06_GPIO_Port, StompLED06_Pin, StompCCvalues[0][4], 0, 0);
-  this->StompsL1[5].Init(StompBtn07_GPIO_Port, StompBtn07_Pin, StompLED07_GPIO_Port, StompLED07_Pin, StompCCvalues[0][5], 0, 0);
-  this->StompsL1[6].Init(StompBtn08_GPIO_Port, StompBtn08_Pin, StompLED08_GPIO_Port, StompLED08_Pin, StompCCvalues[0][6], 0, 0);
-  this->StompsL1[7].Init(StompBtn09_GPIO_Port, StompBtn09_Pin, StompLED09_GPIO_Port, StompLED09_Pin, StompCCvalues[0][7], 0, 0);
-  this->StompsL1[8].Init(StompBtn10_GPIO_Port, StompBtn10_Pin, StompLED10_GPIO_Port, StompLED10_Pin, StompCCvalues[0][8], 0, 0);
+  this->StompsL1[0].Init(StompBtn01_GPIO_Port, StompBtn01_Pin, StompLED01_GPIO_Port, StompLED01_Pin, StompCCvalues[0][0], 0, 0, 0);
+  this->StompsL1[1].Init(StompBtn02_GPIO_Port, StompBtn02_Pin, StompLED02_GPIO_Port, StompLED02_Pin, StompCCvalues[0][1], 0, 0, 0);
+  this->StompsL1[2].Init(StompBtn03_GPIO_Port, StompBtn03_Pin, StompLED03_GPIO_Port, StompLED03_Pin, StompCCvalues[0][2], 0, 0, 0);
+  this->StompsL1[3].Init(StompBtn04_GPIO_Port, StompBtn04_Pin, StompLED04_GPIO_Port, StompLED04_Pin, StompCCvalues[0][3], 0, 0, 0);
+  this->StompsL1[4].Init(StompBtn06_GPIO_Port, StompBtn06_Pin, StompLED06_GPIO_Port, StompLED06_Pin, StompCCvalues[0][4], 0, 0, 0);
+  this->StompsL1[5].Init(StompBtn07_GPIO_Port, StompBtn07_Pin, StompLED07_GPIO_Port, StompLED07_Pin, StompCCvalues[0][5], 0, 0, 0);
+  this->StompsL1[6].Init(StompBtn08_GPIO_Port, StompBtn08_Pin, StompLED08_GPIO_Port, StompLED08_Pin, StompCCvalues[0][6], 0, 0, 0);
+  this->StompsL1[7].Init(StompBtn09_GPIO_Port, StompBtn09_Pin, StompLED09_GPIO_Port, StompLED09_Pin, StompCCvalues[0][7], 0, 0, 0);
+  this->StompsL1[8].Init(StompBtn10_GPIO_Port, StompBtn10_Pin, StompLED10_GPIO_Port, StompLED10_Pin, StompCCvalues[0][8], 0, 0, 0);
 
-  this->StompsL2[0].Init(StompBtn01_GPIO_Port, StompBtn01_Pin, StompLED01_GPIO_Port, StompLED01_Pin, StompCCvalues[1][0], 0, 0);
-  this->StompsL2[1].Init(StompBtn02_GPIO_Port, StompBtn02_Pin, StompLED02_GPIO_Port, StompLED02_Pin, StompCCvalues[1][1], 0, 0);
-  this->StompsL2[2].Init(StompBtn03_GPIO_Port, StompBtn03_Pin, StompLED03_GPIO_Port, StompLED03_Pin, StompCCvalues[1][2], 0, 0);
-  this->StompsL2[3].Init(StompBtn04_GPIO_Port, StompBtn04_Pin, StompLED04_GPIO_Port, StompLED04_Pin, StompCCvalues[1][3], 0, 0);
-  this->StompsL2[4].Init(StompBtn06_GPIO_Port, StompBtn06_Pin, StompLED06_GPIO_Port, StompLED06_Pin, StompCCvalues[1][4], 0, 0);
-  this->StompsL2[5].Init(StompBtn07_GPIO_Port, StompBtn07_Pin, StompLED07_GPIO_Port, StompLED07_Pin, StompCCvalues[1][5], 0, 0);
-  this->StompsL2[6].Init(StompBtn08_GPIO_Port, StompBtn08_Pin, StompLED08_GPIO_Port, StompLED08_Pin, StompCCvalues[1][6], 0, 0);
-  this->StompsL2[7].Init(StompBtn09_GPIO_Port, StompBtn09_Pin, StompLED09_GPIO_Port, StompLED09_Pin, StompCCvalues[1][7], 0, 0);
-  this->StompsL2[8].Init(StompBtn10_GPIO_Port, StompBtn10_Pin, StompLED10_GPIO_Port, StompLED10_Pin, StompCCvalues[1][8], 0, 0);
+  this->StompsL2[0].Init(StompBtn01_GPIO_Port, StompBtn01_Pin, StompLED01_GPIO_Port, StompLED01_Pin, StompCCvalues[1][0], 0, 0, 0);
+  this->StompsL2[1].Init(StompBtn02_GPIO_Port, StompBtn02_Pin, StompLED02_GPIO_Port, StompLED02_Pin, StompCCvalues[1][1], 0, 0, 0);
+  this->StompsL2[2].Init(StompBtn03_GPIO_Port, StompBtn03_Pin, StompLED03_GPIO_Port, StompLED03_Pin, StompCCvalues[1][2], 0, 0, 0);
+  this->StompsL2[3].Init(StompBtn04_GPIO_Port, StompBtn04_Pin, StompLED04_GPIO_Port, StompLED04_Pin, StompCCvalues[1][3], 0, 0, 0);
+  this->StompsL2[4].Init(StompBtn06_GPIO_Port, StompBtn06_Pin, StompLED06_GPIO_Port, StompLED06_Pin, StompCCvalues[1][4], 0, 0, 1);
+  this->StompsL2[5].Init(StompBtn07_GPIO_Port, StompBtn07_Pin, StompLED07_GPIO_Port, StompLED07_Pin, StompCCvalues[1][5], 0, 0, 1);
+  this->StompsL2[6].Init(StompBtn08_GPIO_Port, StompBtn08_Pin, StompLED08_GPIO_Port, StompLED08_Pin, StompCCvalues[1][6], 0, 0, 1);
+  this->StompsL2[7].Init(StompBtn09_GPIO_Port, StompBtn09_Pin, StompLED09_GPIO_Port, StompLED09_Pin, StompCCvalues[1][7], 0, 0, 1);
+  this->StompsL2[8].Init(StompBtn10_GPIO_Port, StompBtn10_Pin, StompLED10_GPIO_Port, StompLED10_Pin, StompCCvalues[1][8], 0, 0, 1);
 
   this->LedMain.Init(LD_PWR_GPIO_Port, LD_PWR_Pin);
   this->LedMain.Set(0, 1000, 200);

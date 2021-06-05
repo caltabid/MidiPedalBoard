@@ -22,10 +22,11 @@ protected:
   uint16_t LedPin;
   uint8_t CC;
   uint8_t OldValue, State;
+  int Mode;
 public:
   CStompBtn();
   virtual ~CStompBtn();
-  void Init(GPIO_TypeDef *BtnPort, uint16_t BtnPin, GPIO_TypeDef *LedPort, uint16_t LedPin, uint8_t CC, uint8_t OldValue, uint8_t State);
+  void Init(GPIO_TypeDef *BtnPort, uint16_t BtnPin, GPIO_TypeDef *LedPort, uint16_t LedPin, uint8_t CC, uint8_t OldValue, uint8_t State, int Mode);
   int Update(int Polarity);
   int GetState(void);
 };

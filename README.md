@@ -34,6 +34,7 @@ I got great inspiration from 2 open source projects:
 * Button CC values (excluded Looper/Page2 Btn)
   * {51, 52, 53, 54, 55, 56, 57, 58, 59}
   * {61, 62, 63, 64, 65, 66, 67, 68, 69}
+  * Buttons 65 to 69 (Second page, front buttons) are stateless and only send value=127, this is better for some looping commands
 * Potentiometers CC values (excluded Mode Pot)
   * {18, 19, 20, 21, 22, 23, 24};
 * Expression pedal CC values
